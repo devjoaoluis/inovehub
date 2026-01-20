@@ -1,8 +1,12 @@
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.exc import SQLAlchemyError
+from dotenv import load_dotenv
 
-# Formato: postgresql://usuario:senha@host:porta/nome_banco
-DATABASE_URL = "postgresql://postgres:admin@localhost:5432/incubadoraEmpresa"
+# Carrega as variáveis do arquivo .env que está na raiz
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 try:
     engine = create_engine(DATABASE_URL)
