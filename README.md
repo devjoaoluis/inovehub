@@ -72,8 +72,8 @@ Com o ambiente virtual ativado e o banco configurado, você tem duas opções:
 Isso abrirá o dashboard direto no navegador, parecendo um site real.
 
 ```bash
-# Substitua 'seu_arquivo.ipynb' pelo nome real do seu notebook
-panel serve seu_arquivo.ipynb --autoreload
+# Execute esse comando no terminal
+panel serve src/views/main.ipynb --autoreload
 
 ```
 
